@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ResideMenu.iml" filepath="$PROJECT_DIR$/ResideMenu.iml" />
+      <module fileurl="file://F:\1 android projects\Reside_Menu\ResideMenu.iml" filepath="F:\1 android projects\Reside_Menu\ResideMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Reside_Menu.iml" filepath="$PROJECT_DIR$/.idea/Reside_Menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\1 android projects\Reside_Menu\app\app.iml" filepath="F:\1 android projects\Reside_Menu\app\app.iml" />
     </modules>
   </component>
 </project>
