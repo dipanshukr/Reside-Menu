@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/menuFirst"
+    android:orientation="vertical"
+    android:background="@android:color/holo_red_dark"
+    android:onClick="showPage"
+    android:gravity="bottom"
+    tools:context="com.kumar.dipanshu.residemenu.Fragments.FirstMenuFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="rererer"/>
+</LinearLayout>
