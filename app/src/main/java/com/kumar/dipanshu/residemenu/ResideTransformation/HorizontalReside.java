@@ -28,7 +28,7 @@ public class HorizontalReside implements ViewPager.PageTransformer {
         }
         else if (page.getId() == R.id.contentPage){
             //when we swipe to left this code applied
-            if (position < 0){
+            if (position <= 0){
 
                 //first we do scaling to 50%
                 float scale = Math.max(0.6f,1-Math.abs(position));
