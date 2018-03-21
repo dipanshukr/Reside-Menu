@@ -33,7 +33,7 @@ public class VerticalReside implements ViewPager.PageTransformer {
             page.setTranslationX(-position*page.getWidth());
 
             //when we swipe to left this code applied
-            if (position < 0){
+            if (position <= 0){
 
                 //first we do scaling to 50%
                 float scale = Math.max(0.6f,1-Math.abs(position));
