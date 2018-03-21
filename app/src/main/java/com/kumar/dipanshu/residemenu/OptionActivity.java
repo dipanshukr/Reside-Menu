@@ -8,30 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-
 public class OptionActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button horizontalReside, verticalReside, cornerReside;
     Intent intent;
-    AdView mAdView;
-    InterstitialAd interstitialAd;
     FloatingActionButton gitHubFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option);
-        MobileAds.initialize(this, getString(R.string.App_ID));
-        showBannerAds();
-        loadInterstitialAds();
-        if (interstitialAd.isLoaded()) {
-            interstitialAd.show();
-        }
 
         horizontalReside = (Button) findViewById(R.id.horizontalResideButton);
         verticalReside = (Button) findViewById(R.id.verticalResideButton);
@@ -51,25 +37,6 @@ public class OptionActivity extends AppCompatActivity implements View.OnClickLis
         horizontalReside.setOnClickListener(this);
         verticalReside.setOnClickListener(this);
         cornerReside.setOnClickListener(this);
-    }
-
-    private void loadInterstitialAds() {
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(getString(R.string.Interstitial_ad_id));
-        interstitialAd.loadAd(new AdRequest.Builder().build());
-        interstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                interstitialAd.loadAd(new AdRequest.Builder().build());
-            }
-        });
-    }
-
-    private void showBannerAds() {
-        mAdView = (AdView) findViewById(R.id.bannerAd);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
     }
 
     @Override
@@ -93,11 +60,4 @@ public class OptionActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (interstitialAd.isLoaded()) {
-            interstitialAd.show();
-        }
-    }
 }
