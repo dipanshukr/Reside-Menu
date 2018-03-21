@@ -25,7 +25,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bannerAd"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -83,7 +82,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bannerAd"
         android:layout_marginBottom="35dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="80dp"
@@ -97,21 +95,11 @@
         android:id="@+id/gitHubFabButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bannerAd"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="25dp"
         android:src="@drawable/github_circle"
         app:backgroundTint="@android:color/holo_red_light"
         app:fabSize="normal" />
-
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/bannerAd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/Banner_ad_id" />
 
 </RelativeLayout>
