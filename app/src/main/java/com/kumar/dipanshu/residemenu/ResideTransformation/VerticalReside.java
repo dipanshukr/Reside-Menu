@@ -24,31 +24,45 @@ public class VerticalReside implements ViewPager.PageTransformer {
 
 
         if (page.getId() == R.id.menuFirst){
+            //putting fragment to the start of the screen
             page.setTranslationX(-position*page.getWidth());
         }
 
         else if (page.getId() == R.id.contentPage){
+            //putting fragment to the start of the screen
             page.setTranslationX(-position*page.getWidth());
 
+            //when we swipe to left this code applied
             if (position < 0){
-                float scale = Math.max(0.5f,1-Math.abs(position));
+
+                //first we do scaling to 50%
+                float scale = Math.max(0.6f,1-Math.abs(position));
                 page.setScaleX(scale);
                 page.setScaleY(scale);
 
-                float deltaWidth = page.getHeight() - scale*page.getHeight();
+                float deltaHeight = page.getHeight() - scale*page.getHeight();
 
-                page.setTranslationY(-deltaWidth/2);
+                //move the fragment to top
+                page.setTranslationY(+deltaHeight/2);
+
             }
+            //when we swipe to right this code applied
             else if (position > 0){
-                float scale = Math.max(0.5f,1-Math.abs(position));
+
+                //first we do scaling to 50%
+                float scale = Math.max(0.6f,1-Math.abs(position));
                 page.setScaleX(scale);
                 page.setScaleY(scale);
 
-                float deltaWidth = page.getHeight() - scale*page.getHeight();
-                page.setTranslationY(+deltaWidth/2);
+                float deltaHeight = page.getHeight() - scale*page.getHeight();
+
+                //move the fragment to bottom
+                page.setTranslationY(-deltaHeight/2);
+
             }
         }
         else if (page.getId() == R.id.menuSecond){
+            //putting fragment to the start of the screen
             page.setTranslationX(-position*page.getWidth());
         }
 

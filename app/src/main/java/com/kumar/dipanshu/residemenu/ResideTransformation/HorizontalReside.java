@@ -23,28 +23,41 @@ public class HorizontalReside implements ViewPager.PageTransformer {
 
 
         if (page.getId() == R.id.menuFirst){
+            //putting fragment to the start of the screen
             page.setTranslationX(-position*page.getWidth());
         }
         else if (page.getId() == R.id.contentPage){
+            //when we swipe to left this code applied
             if (position < 0){
-                float scale = Math.max(0.5f,1-Math.abs(position));
+
+                //first we do scaling to 50%
+                float scale = Math.max(0.6f,1-Math.abs(position));
                 page.setScaleX(scale);
                 page.setScaleY(scale);
 
                 float deltaWidth = page.getWidth() - scale*page.getWidth();
 
+                //place the fragment to the start of the screen and move the fragment to left
                 page.setTranslationX(-position*page.getWidth() - deltaWidth/2);
+
             }
+            //when we swipe to right this code applied
             else if (position > 0){
-                float scale = Math.max(0.5f,1-Math.abs(position));
+
+                //first we do scaling to 50%
+                float scale = Math.max(0.6f,1-Math.abs(position));
                 page.setScaleX(scale);
                 page.setScaleY(scale);
 
                 float deltaWidth = page.getWidth() - scale*page.getWidth();
-                page.setTranslationX((1-position)*page.getWidth() - scale*page.getWidth() - deltaWidth/2);
+
+                //place the fragment to the start of the screen and move the fragment to right
+                page.setTranslationX(-position*page.getWidth() + deltaWidth/2);
+
             }
         }
         else if (page.getId() == R.id.menuSecond){
+            //putting fragment to the start of the screen
             page.setTranslationX(-position*page.getWidth());
         }
 

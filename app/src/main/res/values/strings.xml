@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Reside Menu</string>
+    <string name="App_ID">ca-app-pub-3623169332425111~9843417159</string>
+    <string name="Banner_ad_id">ca-app-pub-3623169332425111/5956143031</string>
+    <string name="Interstitial_ad_id">ca-app-pub-3623169332425111/2957965677</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

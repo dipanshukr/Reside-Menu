@@ -11,16 +11,17 @@ import android.widget.Toast;
 
 import com.kumar.dipanshu.residemenu.R;
 
-public class FirstMenuFragment extends Fragment implements View.OnClickListener {
+public class FifthMenuFragment extends Fragment implements View.OnClickListener {
 
-    public FirstMenuFragment() {
+
+    public FifthMenuFragment() {
 
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_first_menu, container, false);
+        return inflater.inflate(R.layout.fragment_fifth_menu, container, false);
 
     }
 
