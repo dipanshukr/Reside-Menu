@@ -11,6 +11,12 @@ When we slide our page , say left to right. when first menu appear. What i have 
  
  **PageTransformer** is the interface which will control all our transformation.
  
+ You can download the latest sample APK from Google Play store:
+
+<a href="https://play.google.com/store/apps/details?id=com.kumar.dipanshu.residemenu">
+  <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+</a>
+
  ## Horizontal Reside Menu
  <img src="GIFs/Horizontal.gif" />
  
