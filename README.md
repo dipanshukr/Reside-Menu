@@ -1,7 +1,8 @@
 # Reside Menu
 
-In this project i implemented a menu using view pager. To implement this menu , i use view pager. First and third page are the menu page ,
-and second page is our content frame.
+<img src="GIFs/horizontal.gif" height="200" width="120"/> <img src="GIFs/vertical.gif" height="200" width="120"/> <img src="GIFs/corner.gif" height="200" width="120"/> 
+
+In this project I implemented a menu using view pager. To implement this menu , i use view pager. First and third page are the menu page and second page is our content frame.
 
 When we slide our page , say left to right. when first menu appear. What i have done is.
  
