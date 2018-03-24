@@ -11,15 +11,6 @@ When we slide our page , say left to right. when first menu appear. What i have 
  
  **PageTransformer** is the interface which will control all our transformation.
  
- You can download the latest sample APK from Google Play store:
-
-<a href="https://play.google.com/store/apps/details?id=com.kumar.dipanshu.residemenu">
-  <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
-</a>
-
- ## Horizontal Reside Menu
- <img src="GIFs/Horizontal.gif" />
- 
  ```java
  public class HorizontalReside implements ViewPager.PageTransformer {
     @Override
@@ -28,13 +19,10 @@ When we slide our page , say left to right. when first menu appear. What i have 
         //Hiding those pages which are way off-screen to the left or to the right.
         if (position < -1) {
             page.setAlpha(0);
-
         } else if (position > 1) {
             page.setAlpha(0);
-
         } else {
             page.setAlpha(1);
-
         }
 
 
@@ -44,6 +32,37 @@ When we slide our page , say left to right. when first menu appear. What i have 
         }
         else if (page.getId() == R.id.contentPage){
             //when we swipe to left this code applied
+            if (position <= 0){
+               //for each transformation CODE is mentioned below
+            }
+            //when we swipe to right this code applied
+            else if (position > 0){
+              //for each transformation CODE is mentioned below
+            }
+        }
+        else if (page.getId() == R.id.menuSecond){
+            //putting fragment to the start of the screen
+            page.setTranslationX(-position*page.getWidth());
+        }
+    }
+}
+```
+In above code **R.id.menuFirst** & **R.id.menuSecond** are left and right menu fragments respectively, so we set them to the start of the screen.
+**R.id.contentPage** is the fragment which is always visible to user when the user starts the app.
+
+
+ 
+ You can download the latest sample APK from Google Play store:
+
+<a href="https://play.google.com/store/apps/details?id=com.kumar.dipanshu.residemenu">
+  <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
+</a>
+
+ ## Horizontal Reside Menu
+ 
+ ![Horizontal Reside Menu GIF](GIFs/horizontal.gif)
+ 
+ ```java
             if (position <= 0){
 
                 //first we do scaling to 50%
@@ -71,48 +90,13 @@ When we slide our page , say left to right. when first menu appear. What i have 
                 page.setTranslationX(-position*page.getWidth() + deltaWidth/2);
 
             }
-        }
-        else if (page.getId() == R.id.menuSecond){
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position*page.getWidth());
-        }
-
-    }
-
-}
 ```
 
 ## Vertical Reside Menu
-<img src="GIFs/Vertical.gif" />
+
+![Vertical Reside Menu GIF](GIFs/vertical.gif)
 
 ```java
-public class VerticalReside implements ViewPager.PageTransformer {
-
-    @Override
-    public void transformPage(View page, float position) {
-
-        //Hiding those pages which are way off-screen to the left or to the right.
-        if (position < -1) {
-            page.setAlpha(0);
-
-        } else if (position > 1) {
-            page.setAlpha(0);
-
-        } else {
-            page.setAlpha(1);
-
-        }
-
-
-        if (page.getId() == R.id.menuFirst){
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position*page.getWidth());
-        }
-
-        else if (page.getId() == R.id.contentPage){
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position*page.getWidth());
-
             //when we swipe to left this code applied
             if (position <= 0){
 
@@ -141,47 +125,13 @@ public class VerticalReside implements ViewPager.PageTransformer {
                 page.setTranslationY(-deltaHeight/2);
 
             }
-        }
-        else if (page.getId() == R.id.menuSecond){
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position*page.getWidth());
-        }
-
-    }
-}
 ```
 
 ## Corner Reside Menu
-<img src="GIFs/Corner.gif" />
+
+![Corner Reside Menu GIF](GIFs/corner.gif)
 
 ```java
-public class CornerReside implements ViewPager.PageTransformer {
-    @Override
-    public void transformPage(View page, float position) {
-        //Hiding those pages which are way off-screen to the left or to the right.
-        if (position < -1) {
-            page.setAlpha(0);
-
-        }
-        else if (position > 1) {
-            page.setAlpha(0);
-
-        }
-        else {
-            page.setAlpha(1);
-
-        }
-
-
-        if (page.getId() == R.id.menuFirst) {
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position * page.getWidth());
-
-        }
-        else if (page.getId() == R.id.contentPage) {
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position * page.getWidth());
-
             //when we swipe to left this code applied
             if (position <= 0) {
 
@@ -216,14 +166,4 @@ public class CornerReside implements ViewPager.PageTransformer {
                 page.setTranslationX(-position * page.getWidth() + deltaWidth / 2);
 
             }
-
-        }
-        else if (page.getId() == R.id.menuSecond) {
-            //putting fragment to the start of the screen
-            page.setTranslationX(-position * page.getWidth());
-
-        }
-
-    }
-}
 ```
