@@ -48,11 +48,18 @@ When we slide our page , say left to right. when first menu appear. What i have 
 }
 ```
 In above code **R.id.menuFirst** & **R.id.menuSecond** are left and right menu fragments respectively, so we set them to the start of the screen.
-**R.id.contentPage** is the fragment which is always visible to user when the user starts the app.
 
+**R.id.contentPage** is the fragment which is always visible to user when the user starts the app. For this we have to code the animation **When the user swipe to left** and **When the user swipe to right**.
+Also to show **R.id.contentPage** on top set this fragment parent layout elevation by doing this the fragment comes over the first frgament.
+```xml
+android:elevation="10dp"
+```
+To set **R.id.contentPage** is always shown to user whenever user starts the app you can use this
+```java
+viewPager.setCurrentItem(1);
+```
 
- 
- You can download the latest sample APK from Google Play store:
+You can download the latest sample APK from Google Play store:
 
 <a href="https://play.google.com/store/apps/details?id=com.kumar.dipanshu.residemenu">
   <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png" />
