@@ -1,4 +1,4 @@
-# Side Screen Menu
+# Reside Menu
 
 <img src="GIFs/horizontal.gif" height="200" width="120"/> <img src="GIFs/vertical.gif" height="200" width="120"/> <img src="GIFs/corner.gif" height="200" width="120"/> 
 
